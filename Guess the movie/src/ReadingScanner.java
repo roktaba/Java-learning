@@ -5,9 +5,9 @@ public class ReadingScanner {
     private char guessedLetter;
     private int chances;
     private int checkedLettersCounter;
-    char [] checkedChars;
+    char[] checkedChars;
 
-    ReadingScanner(){
+    ReadingScanner() {
         guessedLetter = ' ';
         chances = 10;
         checkedLettersCounter = 0;
@@ -16,13 +16,9 @@ public class ReadingScanner {
 
     public char lookingForAnswer() {
         System.out.println("Pozostalych prob: " + chances);
-        Scanner InScanner = new Scanner(System.in);
-        try {
-            guessedLetter = InScanner.next().charAt(0);
-        } catch (InputMismatchException exception) {
-            System.out.print("To nie była jedna litera");
-        }
-        if(!checkIsAlready(guessedLetter)){
+        Scanner inScanner = new Scanner(System.in);
+        guessedLetter = inScanner.next().charAt(0);
+        if (!checkIsAlready(guessedLetter)) {
             chances--;
         }
         return guessedLetter;
@@ -32,9 +28,9 @@ public class ReadingScanner {
         return chances;
     }
 
-    private boolean checkIsAlready(char x){
-        for (int i=0; i<checkedChars.length; i++){
-            if(checkedChars[i]==x){
+    private boolean checkIsAlready(char x) {
+        for (int i = 0; i < checkedChars.length; i++) {
+            if (checkedChars[i] == x) {
                 System.out.println("Ta litera juz byla, sprobuj ponownie");
                 return true;
             }
