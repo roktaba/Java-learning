@@ -1,7 +1,8 @@
 public class U1 extends Rocket {
-   final int cost =  1000000;
-   int weight = 10000;
-   final int maxWeight = 18000;
+
+   private int cost =  1000000;
+   private int weight = 10000;
+   private int maxWeight = 18000;
 
     @Override
    public boolean launch(){

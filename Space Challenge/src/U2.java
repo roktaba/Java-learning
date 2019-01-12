@@ -1,7 +1,8 @@
 public class U2 extends Rocket {
-    final int cost =  1200000;
-    int weight = 18000;
-    final int maxWeight = 29000;
+
+    private int cost =  1200000;
+    private int weight = 18000;
+    private int maxWeight = 29000;
 
 
     @Override
