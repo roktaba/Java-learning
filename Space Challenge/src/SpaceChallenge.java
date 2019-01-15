@@ -13,12 +13,20 @@ public class SpaceChallenge {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        ArrayList<String> Phase1Array = new ArrayList<String>();
+        ArrayList<String> Phase1Array = new ArrayList<>();
+        ArrayList<String> Phase1ToolsNames = new ArrayList<>();
+        ArrayList<Integer> Phase1ToolsAmmount = new ArrayList<>();
+
         while (scannerFile1.hasNextLine()){
             Phase1Array.add(scannerFile1.nextLine());
         }
+        for (int i=0; i<Phase1Array.size()-1; i++) {
+            String[] parts = Phase1Array.get(i).split("=");
+            for (int j = 0; j<parts.length; j++){
+                System.out.println(parts[j]);
+            }
+        }
 
-        Phase1Array.get(0).indexOf('=');
 
         File file2 = new File("Phase-2.txt");
         Scanner scannerFile2 = null;
