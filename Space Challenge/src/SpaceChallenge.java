@@ -13,20 +13,24 @@ public class SpaceChallenge {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        ArrayList<String> Phase1Array = new ArrayList<>();
-        ArrayList<String> Phase1ToolsNames = new ArrayList<>();
-        ArrayList<Integer> Phase1ToolsAmmount = new ArrayList<>();
+        ArrayList<String> phase1Array = new ArrayList<>();
+        ArrayList<String> phase1ToolsNames = new ArrayList<>();
+        ArrayList<Integer> phase1ToolsAmmount = new ArrayList<>();
 
-        while (scannerFile1.hasNextLine()){
-            Phase1Array.add(scannerFile1.nextLine());
+        while (scannerFile1.hasNextLine()) {
+            phase1Array.add(scannerFile1.nextLine());
         }
-        for (int i=0; i<Phase1Array.size()-1; i++) {
-            String[] parts = Phase1Array.get(i).split("=");
-            for (int j = 0; j<parts.length; j++){
-                System.out.println(parts[j]);
-            }
-        }
+        for (int i = 0; i < phase1Array.size() - 1; i++) {
+            String[] parts = phase1Array.get(i).split("=");
+            phase1ToolsNames.add(parts[0]);
+            phase1ToolsAmmount.add(Integer.valueOf(parts[1]));
 
+
+
+        }
+        for (int j = 0; j < phase1ToolsAmmount.size(); j++){
+            System.out.println(j + "  "  +phase1ToolsAmmount.get(j));
+        }
 
         File file2 = new File("Phase-2.txt");
         Scanner scannerFile2 = null;
@@ -36,7 +40,7 @@ public class SpaceChallenge {
             e.printStackTrace();
         }
         ArrayList<String> Phase2Array = new ArrayList<String>();
-        while (scannerFile2.hasNextLine()){
+        while (scannerFile2.hasNextLine()) {
             Phase2Array.add(scannerFile2.nextLine());
         }
     }
