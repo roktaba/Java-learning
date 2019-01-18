@@ -31,6 +31,9 @@ public class Simulation {
     public ArrayList<Rocket> loadU1(ArrayList<Item> loadedItems){
         ArrayList<Rocket> rockets = new ArrayList<>();
         U1 u1 = new U1();
+        while (loadedItems.size() != 0){
+
+        }
 
         return rockets;
     }
