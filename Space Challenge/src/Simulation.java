@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Simulation {
@@ -14,27 +14,34 @@ public class Simulation {
             e.printStackTrace();
         }
         ArrayList<String> phaseArray = new ArrayList<>();
-        Item phaseItems = new Item();
-        ArrayList<Item> Items = new ArrayList<>();
+        ArrayList<Item> items = new ArrayList<>();
         while (scannerFile.hasNextLine()) {
             phaseArray.add(scannerFile.nextLine());
         }
-        for (int i = 0; i < phaseArray.size() - 1; i++) {
+        for (int i = 0; i < phaseArray.size(); i++) {
+            Item phaseItems = new Item();
             String[] parts = phaseArray.get(i).split("=");
-            Items.add(phaseItems);
-            Items.get(i).setWeight(Integer.valueOf(parts[1]));
-            Items.get(i).setName(parts[0]);
+            items.add(phaseItems);
+            items.get(i).setWeight(Integer.valueOf(parts[1]));
+            items.get(i).setName(parts[0]);
         }
-        return Items;
+        return items;
     }
 
-    public ArrayList<Rocket> loadU1(ArrayList<Item> loadedItems){
-        ArrayList<Rocket> rockets = new ArrayList<>();
+    public ArrayList<SpaceShip> loadU1(ArrayList<Item> loadedItems){
+        ArrayList<SpaceShip> rockets = new ArrayList<>();
         U1 u1 = new U1();
-        while (loadedItems.size() != 0){
+        List<Item> loadedItems2 = new ArrayList<>();
+        System.out.println(loadedItems.size());
+            rockets.add(u1);
 
-        }
-
+            for (int i = 0; i < loadedItems.size()-1 ;i++) {
+                if (rockets.get(0).canCarry(loadedItems.get(i))){
+                    rockets.get(0).carry(loadedItems.get(i));
+                    loadedItems2.add(loadedItems.get(i));
+                }
+            }
+        System.out.println(loadedItems.size());
         return rockets;
     }
 }

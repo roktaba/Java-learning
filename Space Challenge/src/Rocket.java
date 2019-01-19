@@ -1,8 +1,8 @@
 public class Rocket implements SpaceShip {
 
-    private int cost =  0;
-    private int weight = 0;
-    private int maxWeight = 0;
+    double cost;
+    double weight;
+    double maxWeight;
 
     @Override
     public boolean land() {
@@ -21,7 +21,7 @@ public class Rocket implements SpaceShip {
 
     @Override
     public boolean canCarry(Item itemCanCarry) {
-        if ((weight+itemCanCarry.getWeight())>maxWeight) {
+        if ((weight + itemCanCarry.getWeight()) > maxWeight) {
             return false;
         } else return true;
     }

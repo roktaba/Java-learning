@@ -6,7 +6,7 @@ public class SpaceChallenge {
         Simulation phase1Simulation = new Simulation();
         ArrayList<Item> items = new ArrayList<>();
         items = phase1Simulation.loadItems("Phase-1.txt");
-        ArrayList<Rocket> u1Rockets = new ArrayList<>();
+        ArrayList<SpaceShip> u1Rockets = new ArrayList<>();
         u1Rockets = phase1Simulation.loadU1(items);
     }
 }

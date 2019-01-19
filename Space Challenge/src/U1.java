@@ -1,8 +1,11 @@
 public class U1 extends Rocket {
 
-   private int cost =  1000000;
-   private int weight = 10000;
-   private int maxWeight = 18000;
+   public U1(){
+       this.cost = 1000000;
+       this.weight = 10000;
+       this.maxWeight = 18000;
+
+   }
 
     @Override
    public boolean launch(){
@@ -21,4 +24,5 @@ public class U1 extends Rocket {
             return true;
         } else return false;
     }
+
 }
