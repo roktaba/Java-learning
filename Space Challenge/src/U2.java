@@ -9,8 +9,8 @@ public class U2 extends Rocket {
 
     @Override
     public boolean launch(){
-        double chance = 0.04* (weight/maxWeight);
-        double isBoom = Math.random()*101;
+        double chance = 4* (weight/maxWeight);
+        double isBoom = Math.random()*100+1;
         if (chance > isBoom){
             return true;
         } else return false;
@@ -18,8 +18,8 @@ public class U2 extends Rocket {
 
     @Override
     public boolean land() {
-        double chance = 0.08* (weight/maxWeight);
-        double isBoom = Math.random()*101;
+        double chance = 8* (weight/maxWeight);
+        double isBoom = Math.random()*100+1;
         if (chance > isBoom){
             return true;
         } else return false;

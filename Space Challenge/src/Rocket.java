@@ -25,4 +25,8 @@ public class Rocket implements SpaceShip {
             return false;
         } else return true;
     }
+
+    public double getCost() {
+        return cost;
+    }
 }
