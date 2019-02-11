@@ -26,13 +26,13 @@ public class SpaceChallenge {
         double p2U1Budget = phase1Simulation.runSimulation(u1Rockets2);
         double p2U2Budget = phase1Simulation.runSimulation(u2Rockets2);
 
-        System.out.println("Phase-1 Budget for U1 Rockets = "+p1U1Budget);
-        System.out.println("Phase-1 Budget for U2 Rockets = "+p1U2Budget);
-        System.out.println("Phase-2 Budget for U1 Rockets = "+p2U1Budget);
-        System.out.println("Phase-2 Budget for U2 Rockets = "+p2U2Budget);
+        System.out.println("Phase-1 Budget for U1 Rockets = " + p1U1Budget);
+        System.out.println("Phase-1 Budget for U2 Rockets = " + p1U2Budget);
+        System.out.println("Phase-2 Budget for U1 Rockets = " + p2U1Budget);
+        System.out.println("Phase-2 Budget for U2 Rockets = " + p2U2Budget);
         double totalU1Budget = p1U1Budget + p2U1Budget;
-        System.out.println("Total Budget for U1 Rockets = "+ totalU1Budget);
+        System.out.println("Total Budget for U1 Rockets = " + totalU1Budget);
         double totalU2Budget = p1U2Budget + p2U2Budget;
-        System.out.println("Total Budget for U2 Rockets = "+ totalU2Budget);
+        System.out.println("Total Budget for U2 Rockets = " + totalU2Budget);
     }
 }

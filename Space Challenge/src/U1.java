@@ -11,18 +11,14 @@ public class U1 extends Rocket {
    public boolean launch(){
        double chance = 5* (weight/maxWeight);
        double isBoom = Math.random()*100+1;
-       if (chance > isBoom){
-           return true;
-       } else return false;
+        return chance > isBoom;
    }
 
     @Override
     public boolean land() {
         double chance = 1* (weight/maxWeight);
         double isBoom = Math.random()*100+1;
-        if (chance > isBoom){
-            return true;
-        } else return false;
+        return chance > isBoom;
     }
 
 }
